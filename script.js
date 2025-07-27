@@ -43,28 +43,29 @@ const messages = [
     "Nammesava aapesata ante 😏",
 ];
 
-let messageIndex = 0;
+
 
 function handleFirstNoClick() {
     window.location.href = "no_page.html";
 }
-
+let messageIndex = 0;
 function handleNoClick() {
     const noButton = document.querySelector('.no');
     const yesButton = document.querySelector('.yes');
 
-    noButton.textContent = messages[messageIndex];
-    messageIndex++;
-
-    // Hide the no button after last message
+    // First: hide button if all messages are done
     if (messageIndex >= messages.length) {
         noButton.style.display = "none";
         return;
     }
 
-    // Increase Yes button size
+    // Only update text if message exists
+    noButton.textContent = messages[messageIndex];
+    messageIndex++;
+
+    // Grow the yes button gradually
     const currentSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
-    yesButton.style.fontSize = `${currentSize * 1.3}px`;
+    yesButton.style.fontSize = `${currentSize * 1.2}px`;
 }
 
 function handleYesClick() {
