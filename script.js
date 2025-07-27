@@ -52,19 +52,16 @@ function handleFirstNoClick() {
 }
 
 function handleNoClick() {
+    if (messages[messageIndex] == "Nammesava aapesata ante 😏") {
+        // Hide no button
+        noButton.style.display = "none";
+    }
     const noButton = document.querySelector('.no');
     const yesButton = document.querySelector('.yes');
     noButton.textContent = messages[messageIndex];
     messageIndex = (messageIndex + 1) % messages.length;
     const currentSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
     yesButton.style.fontSize = `${currentSize * 1.3}px`;
-
-    // Final message logic
-    if (messages[messageIndex] === "Are you sure 🤔") {
-        // Hide no button
-        noButton.style.display = "none";
-    }
-
     // Advance message index
     
 }
