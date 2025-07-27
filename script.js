@@ -31,9 +31,7 @@ function handleNoClick() {
 function handleYesClick() {
     window.location.href = "yes_page.html";
 }*/
-
 const messages = [
-    
     "Nijamga ?? 🤔🤔",
     "Nammakam leda ?",
     "Please...",
@@ -52,18 +50,21 @@ function handleFirstNoClick() {
 }
 
 function handleNoClick() {
-    if (messages[messageIndex] == "Nammesava aapesata ante 😏") {
-        // Hide no button
-        noButton.style.display = "none";
-    }
     const noButton = document.querySelector('.no');
     const yesButton = document.querySelector('.yes');
+
     noButton.textContent = messages[messageIndex];
-    messageIndex = (messageIndex + 1) % messages.length;
+    messageIndex++;
+
+    // Hide the no button after last message
+    if (messageIndex >= messages.length) {
+        noButton.style.display = "none";
+        return;
+    }
+
+    // Increase Yes button size
     const currentSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
     yesButton.style.fontSize = `${currentSize * 1.3}px`;
-    // Advance message index
-    
 }
 
 function handleYesClick() {
