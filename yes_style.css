@@ -1,0 +1,55 @@
+
+/* 💖 Love-themed styles for the Yes page */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom right, #ffe4ec, #ffd6e8);
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    flex-direction: column;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff0f5;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+    max-width: 90%;
+    width: 500px;
+}
+
+/* 💌 Header text style */
+.header_text {
+    font-size: 3em;
+    color: #e91e63;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px #ffb6c1;
+}
+
+/* 💕 GIF container with floating effect */
+.gif_container img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 15px;
+    margin-top: 25px;
+    box-shadow: 0 5px 15px rgba(255, 182, 193, 0.4);
+    animation: float 4s ease-in-out infinite;
+}
+
+/* ✨ Floating animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* 🌸 Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
