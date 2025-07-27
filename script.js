@@ -33,9 +33,9 @@ function handleYesClick() {
 }*/
 const messages = [
     "Nijamga ?? 🤔🤔",
-    "Nammakam leda ?",
-    "Please...",
-    "Okasari aalochinchu 👉👈",
+    "Nammakam leda neha ?",
+    "neha Please...",
+    "Okasari aalochinchu neha 👉👈",
     "Nuvvu kadu ante nenu badhapadatha..🙂",
     "Chala badhapadatha...🙁🙁",
     "Chala chala badhapadatha.... 😔😔😔",
