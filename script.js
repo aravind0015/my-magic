@@ -33,7 +33,7 @@ function handleYesClick() {
 }*/
 
 const messages = [
-    "Are you sure 🤔?",
+    
     "Nijamga ?? 🤔🤔",
     "Nammakam leda ?",
     "Please...",
@@ -42,7 +42,8 @@ const messages = [
     "Chala badhapadatha...🙁🙁",
     "Chala chala badhapadatha.... 😔😔😔",
     "Sare inka aapesta le , joke chesa 🤧",
-    "Nammesava aapesata ante 😏"
+    "Nammesava aapesata ante 😏",
+    "Are you sure 🤔?"
 ];
 
 let messageIndex = 0;
@@ -52,31 +53,21 @@ function handleFirstNoClick() {
 }
 
 function handleNoClick() {
-    const noButton = document.querySelector('.no') || document.querySelector('button:nth-of-type(2)');
-    const yesButton = document.querySelector('.yes') || document.querySelector('button:nth-of-type(1)');
-
-    // Set button message
+    const noButton = document.querySelector('.no');
+    const yesButton = document.querySelector('.yes');
     noButton.textContent = messages[messageIndex];
-
-    // Increase YES button size progressively
+    messageIndex = (messageIndex + 1) % messages.length;
     const currentSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
     yesButton.style.fontSize = `${currentSize * 1.5}px`;
 
     // Final message logic
-    if (messages[messageIndex] === "Nammesava aapesata ante 😏") {
+    if (messages[messageIndex] === "Are you sure 🤔") {
         // Hide no button
         noButton.style.display = "none";
-
-        // Style YES button massively
-        yesButton.style.fontSize = "60px";
-        yesButton.style.padding = "20px 40px";
-        yesButton.style.margin = "100px auto";
-        yesButton.style.display = "block";
-        yesButton.style.transition = "all 0.5s ease";
     }
 
     // Advance message index
-    messageIndex = (messageIndex + 1) % messages.length;
+    
 }
 
 function handleYesClick() {
