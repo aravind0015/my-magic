@@ -43,7 +43,6 @@ const messages = [
     "Chala chala badhapadatha.... 😔😔😔",
     "Sare inka aapesta le , joke chesa 🤧",
     "Nammesava aapesata ante 😏",
-    "Are you sure 🤔?"
 ];
 
 let messageIndex = 0;
